@@ -1,7 +1,6 @@
 from email import header
 import requests
 
-# 转换用resp.encode('utf-8')
 query = input()
 url = f'https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd={query}'
 
@@ -12,4 +11,4 @@ resp = requests.get(url,headers=dic)
 
 print(resp)
 with open("result.html", mode="w", encoding="utf-8") as f:
-    f.write(resp.text)#拿到网页源代码
+    f.write(resp.text)
